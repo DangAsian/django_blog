@@ -1,11 +1,14 @@
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Article List</title>
-</head>
-<body>
+{%extends 'base_layout.html'%}
+
+{% block content %}
   <h1>Article List</h1>
-</body>
-</html>
+  <div class ='articles'>
+    {%for article in articles %}
+      <div class="article">
+        <h2><a href="#"> {{article.title}}</a></h2>
+        <p> {{article.snippet}} </p>
+        <h3> {{article.date}} </h3>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

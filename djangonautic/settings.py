@@ -119,3 +119,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#BASE_DIR is the base directory (djangonautic2) and assets is a folder within the base directory
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "assets"),
+)
